@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "poppins", sans-serif;
   box-sizing: border-box;
+  
 }
 .hero {
   background: #1d2026;
@@ -49,6 +50,7 @@ button {
   border: 0;
   outline: 0;
   cursor: pointer;
+  transition: background-color 0.5s;
 }
 button span {
   display: block;
@@ -57,6 +59,7 @@ button span {
   width: 26px;
   border-radius: 50%;
   margin-left: 2px;
+  transition: background-color 0.5s, margin-left 0.5s;
 }
 .lamp-container {
   position: absolute;
@@ -68,12 +71,14 @@ button span {
   width: 100%;
 }
 .light {
+  opacity: 0;
   position: absolute;
   top: 97%;
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
   margin-left: -10px;
+  transition: opacity 0.5s;
 }
 .text-container {
   max-width: 600px;
@@ -94,4 +99,37 @@ button span {
   margin-top: 30px;
   border-radius: 30px;
   text-align: center;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-right: 370px;
+}
+.control .line {
+  width: 250px;
+  height: 4px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+.control .line span {
+  width: 50%;
+  height: 8px;
+  margin-top: -2px;
+  border-radius: 4px;
+  background: #00986f;
+  display: block;
+}
+.active {
+  background: green;
+}
+.active span {
+  background: #fff;
+  margin-left: 31px;
+}
+.on {
+  opacity: 1;
 }
